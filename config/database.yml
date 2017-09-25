@@ -1,0 +1,25 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: localhost
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: owlisor_development
+
+test:
+  <<: *default
+  database: owlisor_test
+
+#
+production:
+  <<: *default
+  database: realsynch_subscribe_production
+  username: realsynch_subscribe
+  password: <%= ENV['OWLISOR_DATABASE_PASSWORD'] %>

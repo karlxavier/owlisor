@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Owlisor</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </head>
+
+  <body class="default-version">
+  	
+  	<header class="header_area">
+  		<div class="main_header_area animated">
+  			<div class="container">
+                <div class="row">
+
+                    <div class="col-12 col-sm-2">
+                        <!-- Logo Area:: For better view in all device please use logo image max-width 70px -->
+                        <div class="logo_area">
+                            <a href="index.html">
+                            	<%= image_tag 'logo.png' %>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-10">
+                        <!-- Menu Area Start -->
+                        <div class="main_menu_area">
+                            <div class="mainmenu">
+                                <nav style="display: block;">
+                                    <ul id="nav">
+                                        <li class="current_page_item"><a href="#home">About Us</a></li>
+                                        <li class=""><a href="#features">Hire the Owl</a></li>
+                                        <li class=""><a href="#price">Sign In</a></li>
+                                        <li class=""><a href="#download">Sign Up</a></li>
+                                        <li class=""><a href="#contact">Contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </div>
+                        <!-- Menu Area End -->
+                    </div>
+                </div>
+            </div>
+  		</div>
+  	</header>
+    <%= yield %>
+  </body>
+</html>
